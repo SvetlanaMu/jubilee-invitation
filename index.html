@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7e8e4" />
+    <title>Юбилей мамы - 80 лет</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <audio id="backgroundMusic" preload="none" loop>
+      <source src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/Canon%20in%20D%20Major.mp3" type="audio/mpeg" />
+    </audio>
+    <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false" title="Включить музыку">
+      <span aria-hidden="true">♪</span><span id="musicLabel">Музыка</span>
+    </button>
+
+    <main>
+      <section class="hero section" id="top">
+        <div class="floral floral-top" aria-hidden="true"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">Юбилей</p>
+          <div class="age" aria-label="80 лет"><span>8</span><span>0</span></div>
+          <h1>лет</h1>
+          <p class="hero-subtitle">нашей дорогой мамы</p>
+          <span class="tiny-flower" aria-hidden="true">✦</span>
+          <p class="hero-details">10 октября 2026 года<br /><strong>18:00</strong></p>
+          <p class="hero-location">Алматы · ресторан «Парасат»</p>
+        </div>
+        <a class="scroll-mark" href="#invitation" aria-label="Перейти к приглашению">↓</a>
+        <div class="floral floral-bottom" aria-hidden="true"></div>
+      </section>
+
+      <section class="invitation section section-paper" id="invitation">
+        <div class="section-inner narrow reveal">
+          <p class="eyebrow">Приглашение</p>
+          <h2 id="personalGreeting">Дорогие родные и близкие!</h2>
+          <div class="gold-line" aria-hidden="true"></div>
+          <p>В нашей семье особенный праздник - 80-летний юбилей нашей любимой мамы.</p>
+          <p>Мы хотим провести этот важный и радостный день в кругу самых дорогих людей и будем счастливы разделить этот праздник с Вами.</p>
+          <p class="invite-emphasis">Будем рады видеть Вас на нашем торжестве!</p>
+        </div>
+      </section>
+
+      <section class="portrait-section section" id="portrait">
+        <div class="section-inner reveal">
+          <p class="eyebrow">Наша мама</p>
+          <div class="portrait-frame">
+            <img class="portrait-photo" src="assets/mama-family.jpeg" alt="Мама в кругу семьи" />
+            <span class="frame-flower frame-flower-left" aria-hidden="true">✿</span>
+            <span class="frame-flower frame-flower-right" aria-hidden="true">✿</span>
+          </div>
+          <blockquote>80 лет - это целая история жизни, наполненная любовью, семьёй, добрыми воспоминаниями и счастливыми моментами.</blockquote>
+        </div>
+      </section>
+
+      <section class="date-section section section-paper" id="date">
+        <div class="section-inner reveal">
+          <p class="eyebrow">Сохраняйте дату</p>
+          <div class="date-display"><span class="date-day">10</span><span class="date-month">октября<br />2026</span></div>
+          <p class="time">18:00</p>
+          <div class="gold-line" aria-hidden="true"></div>
+          <p class="countdown-label">До праздника осталось</p>
+          <div class="countdown" id="countdown" aria-live="polite">
+            <div><strong id="days">00</strong><span>дней</span></div>
+            <div><strong id="hours">00</strong><span>часов</span></div>
+            <div><strong id="minutes">00</strong><span>минут</span></div>
+            <div><strong id="seconds">00</strong><span>секунд</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="venue-section section" id="venue">
+        <div class="section-inner reveal">
+          <p class="eyebrow">Место встречи</p>
+          <h2>Ресторан «Парасат»</h2>
+          <p class="city">г. Алматы</p>
+          <div class="map-card" role="img" aria-label="Схематичная карта города Алматы">
+            <div class="map-roads map-road-one"></div><div class="map-roads map-road-two"></div><div class="map-roads map-road-three"></div>
+            <span class="map-pin">●</span><span class="map-label">Парасат</span>
+          </div>
+          <a class="button button-outline" href="https://www.google.com/maps/search/?api=1&query=%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20%D0%9F%D0%B0%D1%80%D0%B0%D1%81%D0%B0%D1%82%20%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B" target="_blank" rel="noopener">Открыть маршрут <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="rsvp-section section section-paper" id="rsvp">
+        <div class="section-inner narrow reveal">
+          <p class="eyebrow">Подтверждение</p>
+          <h2>Будем рады видеть Вас!</h2>
+          <p>Пожалуйста, подтвердите своё присутствие.</p>
+          <div class="rsvp-actions" id="rsvpActions">
+            <button class="button button-primary" type="button" data-answer="yes">Я буду</button>
+            <button class="button button-secondary" type="button" data-answer="no">К сожалению, не смогу</button>
+          </div>
+          <p class="rsvp-message" id="rsvpMessage" role="status"></p>
+          <button class="share-button" id="shareButton" type="button">Поделиться приглашением</button>
+        </div>
+      </section>
+
+      <section class="final-section section">
+        <div class="floral floral-final" aria-hidden="true"></div>
+        <div class="section-inner reveal">
+          <span class="tiny-flower" aria-hidden="true">✦</span>
+          <h2>До встречи<br />на празднике!</h2>
+          <p>С любовью ждём Вас.</p>
+          <a class="to-top" href="#top">Наверх ↑</a>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

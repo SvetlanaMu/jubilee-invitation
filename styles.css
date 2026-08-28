@@ -1,0 +1,43 @@
+:root { --rose: #f7e8e4; --paper: #fffaf4; --ink: #5b4246; --muted: #927478; --gold: #c49c63; --line: #ead5c9; --accent: #b76d78; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--rose); font-family: Montserrat, Arial, sans-serif; font-size: 15px; line-height: 1.8; }
+button, a { font: inherit; }
+.section { position: relative; overflow: hidden; padding: 88px 24px; text-align: center; }
+.section-paper { background: var(--paper); }
+.section-inner { width: min(100%, 660px); margin: auto; }
+.narrow { max-width: 550px; }
+.eyebrow { margin: 0 0 12px; color: var(--gold); font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; }
+h1, h2, .age, .date-display, blockquote { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; }
+h2 { margin: 0 0 18px; font-size: clamp(37px, 8vw, 52px); line-height: .95; }
+p { margin: 0 0 19px; }
+.hero { min-height: 100svh; display: grid; place-items: center; background-color: #f9e9e5; padding: 90px 24px 70px; }
+.hero-content { position: relative; z-index: 1; }
+.hero .eyebrow { margin-bottom: 5px; }
+.age { display: flex; justify-content: center; color: var(--accent); font-size: clamp(172px, 48vw, 290px); line-height: .62; letter-spacing: -12px; }
+.age span:last-child { margin-left: -7px; }
+.hero h1 { margin: 10px 0 4px; color: var(--gold); font-size: clamp(57px, 14vw, 82px); font-style: italic; line-height: .75; text-transform: uppercase; }
+.hero-subtitle { margin: 27px 0 13px; font-family: "Cormorant Garamond", Georgia, serif; font-size: 26px; font-style: italic; }
+.tiny-flower { display: inline-block; color: var(--gold); font-size: 20px; }
+.hero-details { margin: 18px 0 6px; font-size: 14px; letter-spacing: .2px; }
+.hero-details strong { font-size: 17px; font-weight: 600; }
+.hero-location { margin: 0; font-size: 12px; letter-spacing: .4px; }
+.floral { position: absolute; pointer-events: none; background: url("https://w7.pngwing.com/pngs/312/726/png-transparent-watercolor-peony-floral-bouquet-in-blush-pink-and-sage-green-tones.png") center / contain no-repeat; opacity: .75; }
+.floral-top { width: min(58vw, 420px); height: min(58vw, 420px); top: -9vw; left: -20vw; transform: rotate(-18deg); }
+.floral-bottom { width: min(55vw, 400px); height: min(55vw, 400px); right: -20vw; bottom: -8vw; transform: rotate(160deg); }
+.scroll-mark { position: absolute; bottom: 24px; z-index: 2; color: var(--gold); font-size: 26px; text-decoration: none; animation: bob 1.8s ease-in-out infinite; }
+.gold-line { width: 66px; height: 1px; margin: 24px auto; background: var(--gold); }
+.invite-emphasis { margin-top: 28px; font-family: "Cormorant Garamond", Georgia, serif; font-size: 25px; font-style: italic; }
+.portrait-section { padding-top: 78px; }
+.portrait-frame { position: relative; width: min(75vw, 370px); aspect-ratio: 4 / 5; margin: 29px auto 36px; padding: 10px; border: 1px solid var(--gold); }
+.portrait-photo { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 46%; }
+.frame-flower { position: absolute; color: #d59a9d; font-size: 65px; line-height: 1; }
+.frame-flower-left { left: -34px; bottom: -27px; transform: rotate(-30deg); }.frame-flower-right { right: -30px; top: -26px; transform: rotate(30deg); }
+blockquote { max-width: 500px; margin: auto; font-size: 25px; font-style: italic; line-height: 1.2; }
+.date-section { padding-bottom: 95px; }.date-display { display: flex; align-items: center; justify-content: center; gap: 16px; color: var(--accent); }.date-day { font-size: 106px; line-height: .85; }.date-month { padding-left: 16px; border-left: 1px solid var(--gold); font-size: 29px; line-height: 1; text-align: left; }.time { margin: 24px 0 0; color: var(--gold); font-family: "Cormorant Garamond", Georgia, serif; font-size: 44px; }.countdown-label { margin-bottom: 17px; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; }.countdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }.countdown div { padding: 11px 4px 9px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }.countdown strong { display: block; color: var(--accent); font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(27px, 7vw, 42px); line-height: 1; }.countdown span { display: block; margin-top: 7px; color: var(--muted); font-size: 9px; letter-spacing: .4px; text-transform: uppercase; }
+.venue-section { background: #f2e4dc; }.city { margin-top: -9px; color: var(--muted); }.map-card { position: relative; width: min(100%, 560px); height: 220px; margin: 30px auto 28px; overflow: hidden; border: 1px solid rgba(196, 156, 99, .55); background-color: #dbe5d7; }.map-roads { position: absolute; background: rgba(255, 250, 244, .9); transform: rotate(-17deg); }.map-road-one { top: 75px; left: -40px; width: 130%; height: 18px; }.map-road-two { top: 28px; left: 100px; width: 16px; height: 270px; }.map-road-three { top: 150px; left: -10px; width: 120%; height: 8px; transform: rotate(28deg); }.map-pin { position: absolute; top: 79px; left: calc(50% - 10px); color: var(--accent); font-size: 39px; line-height: 1; text-shadow: 0 2px 0 #fffaf4; }.map-label { position: absolute; top: 126px; left: 54%; padding: 2px 8px; background: var(--paper); color: var(--ink); font-size: 12px; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 21px; border: 1px solid transparent; cursor: pointer; text-decoration: none; transition: transform .2s ease, background-color .2s ease; }.button:hover { transform: translateY(-2px); }.button-outline { color: var(--ink); border-color: var(--gold); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }.button-outline span { margin-left: 8px; color: var(--gold); font-size: 18px; }.rsvp-actions { display: grid; gap: 11px; width: min(100%, 360px); margin: 29px auto 0; }.button-primary { background: var(--accent); color: #fff; }.button-secondary { border-color: #d7bfc0; color: var(--muted); background: transparent; }.rsvp-message { min-height: 29px; margin: 22px 0 0; color: var(--accent); font-family: "Cormorant Garamond", Georgia, serif; font-size: 23px; font-style: italic; line-height: 1.25; }.share-button { margin-top: 7px; padding: 5px 0; color: var(--muted); border: 0; border-bottom: 1px solid var(--muted); background: none; cursor: pointer; font-size: 12px; }
+.final-section { min-height: 55svh; display: grid; place-items: center; background-color: #f9e9e5; }.final-section h2 { margin-top: 16px; color: var(--accent); font-size: clamp(46px, 11vw, 67px); }.final-section p { font-family: "Cormorant Garamond", Georgia, serif; font-size: 25px; font-style: italic; }.floral-final { width: min(65vw, 440px); height: min(65vw, 440px); bottom: -18vw; left: -22vw; transform: rotate(15deg); }.to-top { position: relative; color: var(--gold); font-size: 11px; letter-spacing: 1.4px; text-decoration: none; text-transform: uppercase; }.music-toggle { position: fixed; top: 17px; right: 17px; z-index: 10; display: inline-flex; align-items: center; gap: 7px; min-height: 38px; padding: 8px 11px; border: 1px solid rgba(196, 156, 99, .7); color: var(--ink); background: rgba(255, 250, 244, .85); cursor: pointer; font-size: 11px; letter-spacing: .8px; text-transform: uppercase; backdrop-filter: blur(5px); }.music-toggle span:first-child { color: var(--gold); font-size: 17px; }.music-toggle.is-playing { border-color: var(--accent); color: var(--accent); }
+.reveal { animation: appear .9s both; }.hero .reveal { animation-delay: .25s; }@keyframes appear { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }@keyframes bob { 50% { transform: translateY(7px); } }
+@media (min-width: 700px) { body { font-size: 16px; }.section { padding: 105px 32px; }.hero { min-height: 780px; }.floral-top { left: -8vw; }.floral-bottom { right: -8vw; }.rsvp-actions { grid-template-columns: 1fr 1.25fr; width: min(100%, 520px); }.venue-section { padding-bottom: 110px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }.reveal, .scroll-mark { animation: none; } }
